@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Portfolio Details</h2>
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li>Portfolio Details</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="portfolio-details-container">
+
+          <div class="owl-carousel portfolio-details-carousel">
+            <img src="{{web.imageURL}} " class="img-fluid" alt="">
+            <img src="{{web.image2URL}} " class="img-fluid" alt="">
+            <img src="{{web.image3URL}} " class="img-fluid" alt="">
+          </div>
+
+          <div class="portfolio-info">
+            <h3>Project information</h3>
+            <ul>
+              <li><strong>Category</strong>: Web</li>
+              <li><strong>Client</strong>: {{web.client}} </li>
+              <li><strong>Project date</strong>: {{web.date}} </li>
+              <li><strong>Project URL</strong>: <a href="{{web.url}}" target="blank">{{web.url}}</a> </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="portfolio-description">
+          <h2>{{web.title}} </h2>
+          <p>
+            {{web.description}}
+          </p>
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+</main>
+{% endblock body %}
